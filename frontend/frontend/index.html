@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IMEC Intelligence Hub</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">IMEC Intelligence Hub</div>
+    <nav class="nav">
+      <a href="#search">Recherche</a>
+      <a href="#key-figures">Chiffres clés</a>
+      <a href="#about">À propos</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Données stratégiques IMEC, par pays et par thèmes</h1>
+    <p>Budgets • Projets • Déclarations officielles • Événements • Acteurs clés</p>
+    <form id="search-form" class="search" autocomplete="off">
+      <input id="q" type="search" placeholder="Ex : India energy, Saudi budget 2024, EU declarations…" />
+      <button type="submit">Rechercher</button>
+    </form>
+    <small class="hint">Astuce : essaye des requêtes en français ou anglais</small>
+  </section>
+
+  <main class="container">
+    <section id="results" class="results"></section>
+
+    <section id="key-figures" class="cards">
+      <article class="card">
+        <h3>Couverture</h3>
+        <p>Suivi multi-sources : FR/EN/AR + docs officiels</p>
+      </article>
+      <article class="card">
+        <h3>Mise à jour</h3>
+        <p>Agent interne qui agrège et structure en continu</p>
+      </article>
+      <article class="card">
+        <h3>Export</h3>
+        <p>Données prêtes pour vos briefings et présentations</p>
+      </article>
+    </section>
+
+    <section id="about" class="about">
+      <h2>À propos</h2>
+      <p>
+        IMEC Intelligence Hub est un observatoire multi-langues des initiatives, budgets, annonces et
+        acteurs liés au corridor IMEC. Interface conçue pour décisionnaires, journalistes et investisseurs.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">© IMEC Intelligence Hub — Léa Landman</footer>
+
+  <!-- ⚠️ À mettre à jour plus tard avec l’URL Render de ton API -->
+  <script>window.API_URL = "https://TON-SERVICE-RENDER.onrender.com";</script>
+  <script src="./app.js"></script>
+</body>
+</html>
