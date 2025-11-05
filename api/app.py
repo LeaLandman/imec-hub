@@ -17,7 +17,7 @@ from sqlalchemy.orm import Session
 from typing import Optional, List
 from models import Base, Budget, Project, Statement, Event, News, Entity, Person, LegalInstrument, Jurisdiction
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://postgres:postgres@localhost:5432/imec")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://postgres:postgres@localhost:5432/imec")
 API_KEY = os.getenv("API_KEY", "changeme")
 CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
 
