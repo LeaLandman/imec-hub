@@ -1,3 +1,12 @@
+# Auto-create DB tables if they don't exist (for free Render plan)
+import sys
+sys.path.append("../db")
+try:
+    from bootstrap_imec_db import main as bootstrap_db
+    bootstrap_db()
+    print("✅ Database initialized successfully (or already exists).")
+except Exception as e:
+    print("⚠️ Database init skipped or failed:", e)
 
 import os
 from fastapi import FastAPI, Query, Depends, Header, HTTPException
