@@ -1,28 +1,104 @@
-/* ====== Résultats ====== */
+/* ====== Reset & Base ====== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: #f6f8fc;
+  color: #1e1e1e;
+}
+
+/* ====== Topbar ====== */
+.topbar {
+  background: #1e2a78;
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* ====== Container ====== */
+.container {
+  max-width: 1150px;
+  margin: 42px auto;
+  padding: 0 22px;
+}
+
+/* ====== Search Box ====== */
+.search-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(16,24,40,.06);
+}
+
+#q {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+#q:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.25);
+}
+
+#search-btn {
+  padding: 14px 22px;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .05s ease, background .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 20px rgba(59,130,246,.35);
+}
+#search-btn:hover { background: #2563eb; }
+#search-btn:active { transform: translateY(1px); }
+
+/* ====== Results ====== */
+#results { margin-top: 22px; }
+
 .result-card {
   background: #e9ecf8;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out;
+  padding: 28px;
+  border-radius: 16px;
+  margin-top: 18px;
+  box-shadow: 0 6px 22px rgba(16,24,40,.06);
+  transition: transform .2s ease-in-out;
 }
-
-.result-card:hover {
-  transform: scale(1.02);
-}
-
+.result-card:hover { transform: scale(1.01); }
 .result-card h3 {
   color: #1e1e1e;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
   text-align: center;
 }
-
 .result-card p {
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 17px;
+  color: #334155;
   text-align: center;
   line-height: 1.6;
+  margin: 0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 640px) {
+  .topbar h1 { font-size: 32px; }
+  .search-box { grid-template-columns: 1fr; }
+  #search-btn { width: 100%; }
 }
