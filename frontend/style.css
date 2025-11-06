@@ -1,70 +1,28 @@
-body {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fb;
-  color: #333;
+/* ====== Résultats ====== */
+.result-card {
+  background: #e9ecf8;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.result-card:hover {
+  transform: scale(1.02);
+}
+
+.result-card h3 {
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
-header {
-  background-color: #1a237e;
-  color: white;
-  padding: 2rem 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  margin: 0;
-  font-size: 2rem;
-  letter-spacing: 1px;
-}
-
-main {
-  margin: 2rem auto;
-  max-width: 700px;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-#search-section {
-  margin-bottom: 2rem;
-}
-
-input[type="text"] {
-  padding: 0.7rem;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 0.7rem 1rem;
-  background-color: #3949ab;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-button:hover {
-  background-color: #5c6bc0;
-}
-
-.result-card {
-  background: #e8eaf6;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-footer {
-  margin-top: 3rem;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.9rem;
-  color: #666;
+.result-card p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
 }
